@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 const reveal = { hidden: { opacity: 0, y: 26 }, visible: { opacity: 1, y: 0 } };
-const transition = { duration: 0.65, ease: [0.22, 1, 0.36, 1] };
+const transition = { duration: 0.65, ease: [0.22, 1, 0.36, 1] as const };
 
 function Heading({ number, children }: { number: string; children: React.ReactNode }) {
   return <div className="heading"><p>{number}</p><h2>{children}</h2></div>;
